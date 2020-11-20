@@ -11,7 +11,6 @@ export const reducer = (state, action) => {
       case SHUFFLE:
         return shuffle(state)
         case STOP_ODD:
-            console.log(state)
             return state.map((cube) => cube.value % 2 === 0 ? cube : { ...cube, animated: false })
           case CHANGE_ODD:
             return state.map((cube) => cube.value % 2 === 0 ? cube : { ...cube, animated: true })

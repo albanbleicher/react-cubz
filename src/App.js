@@ -15,13 +15,12 @@ function App() {
       <Button onClick={() => dispatch({type:'CHANGE ODD'})}>CHANGE ODD</Button>
       <Button onClick={() => dispatch({type:'STOP ODD'})}>END ODD</Button>
       <div className="list">
-        
       <Canvas  style={{height:"100vh",width:"90vw"}}>
       <ambientLight />
     <pointLight position={[10, 10, 10]} />
-        {state.map((item, i) => {
+        {state.map((item, index) => {
           return (
-            <Cube {...item} key={i} position={[-1+((i%10)*0.2),0.4-(0.2*(Math.floor(i/10))),4]} />
+            <Cube {...item} key={index} position={[-1+((index%10)*0.2),0.4-(0.2*(Math.floor(index/10))),4]} />
           )
         })}
         </Canvas>

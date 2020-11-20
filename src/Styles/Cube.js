@@ -5,8 +5,7 @@ export function Cube (props) {
   const mesh = useRef()
   let time = 0;
   let colors = ['red', 'blue', 'yellow', 'green', 'aqua','coral','crimson','darkblue','darkred'];
-  const [is_17, setIs_17] = useState(false)
-
+  const [is_17, setIs_17] = useState(false);
   useEffect(() => {
     console.log(props.value === 17)
     if(props.value  === 17) {
@@ -36,7 +35,6 @@ export function Cube (props) {
     }
 
   }
-
   return (
     <mesh
       {...props}
