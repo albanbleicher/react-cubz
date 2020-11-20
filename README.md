@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Cubz
 Projet React & Three.js dans le cadre d'un module JS avancé React
-[Démonstration](https://cubz.albchr.dev)
+- [Démonstration](https://cubz.albchr.dev)
