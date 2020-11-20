@@ -3,6 +3,7 @@ import { useFrame } from 'react-three-fiber'
 import { Html } from 'drei'
 export function Cube (props) {
   const mesh = useRef()
+  let time = 0;
   let colors = ['red', 'blue', 'yellow', 'green', 'aqua','coral','crimson','darkblue','darkred'];
   const [is_17, setIs_17] = useState(false)
 
@@ -16,8 +17,10 @@ export function Cube (props) {
     }
   },[props.value])
   useFrame(() => {
+    time+=0.01
     if(props.animated) {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+      mesh.current.scale.x = mesh.current.scale.y = mesh.current.scale.z = Math.cos(time)
     }
   })
   const Shape = () => {
