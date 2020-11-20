@@ -4,7 +4,6 @@ import { Html } from 'drei'
 export function Cube (props) {
   const mesh = useRef()
   let colors = ['red', 'blue', 'yellow', 'green', 'aqua','coral','crimson','darkblue','darkred'];
-  const [hovered, setHover] = useState(false)
   const [is_17, setIs_17] = useState(false)
 
   useEffect(() => {
@@ -34,9 +33,7 @@ export function Cube (props) {
   return (
     <mesh
       {...props}
-      ref={mesh}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}>
+      ref={mesh}>
         <Shape/>
         <Html scaleFactor={1}>
         <div class="content">
