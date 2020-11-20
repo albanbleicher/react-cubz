@@ -21,7 +21,7 @@ function App() {
     <pointLight position={[10, 10, 10]} />
         {state.map((item, i) => {
           return (
-            <Cube {...item} key={i} index={i} position={[-1+((i%10)*0.2),0.4-(0.2*(Math.floor(i/10))),4]} />
+            <Cube {...item} key={i} position={[-1+((i%10)*0.2),0.4-(0.2*(Math.floor(i/10))),4]} />
           )
         })}
         </Canvas>

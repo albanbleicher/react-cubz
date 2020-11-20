@@ -7,8 +7,12 @@ export function Cube (props) {
   const [is_17, setIs_17] = useState(false)
 
   useEffect(() => {
-    if(props.index  === 17) {
+    console.log(props.value === 17)
+    if(props.value  === 17) {
       setIs_17(true)
+    }
+    else {
+      setIs_17(false)
     }
   },[props.value])
   useFrame(() => {
@@ -36,7 +40,7 @@ export function Cube (props) {
       ref={mesh}>
         <Shape/>
         <Html scaleFactor={1}>
-        <div class="content">
+        <div className="content">
           {props.value}
         </div>
       </Html>
